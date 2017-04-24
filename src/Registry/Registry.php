@@ -57,4 +57,16 @@ class Registry
     $instance = self::__init ();
     return $instance->store [ $key ];
   }
+
+  /**
+   * Static property check method
+   * @method stored
+   * @param string $key Name of the index being checked
+   * @return boolean
+   */
+  public static function stored ( $key )
+  {
+    $instance = self::__init ();
+    return isset ( $instance->store [ $key ] );
+  }
 }
