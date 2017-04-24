@@ -45,4 +45,16 @@ class Registry
     $instance = self::__init ();
     $instance->store [ $key ] = $value;
   }
+
+  /**
+   * Static getter method
+   * @method load
+   * @param string $key Name of the index being retrieved from the register.
+   * @return mixed
+   */
+  public static function load ( $key )
+  {
+    $instance = self::__init ();
+    return $instance->store [ $key ];
+  }
 }
