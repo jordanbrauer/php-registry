@@ -15,5 +15,8 @@
         "Jorb\\Registry\\": "src/Registry/"
       }
     },
-    "require": {}
+    "require": {
+      "php": ">=5.2.9",
+        "phpdocumentor/phpdocumentor": "^2.9"
+    }
 }
