@@ -69,4 +69,15 @@ class Registry
     $instance = self::__init ();
     return isset ( $instance->store [ $key ] );
   }
+
+  /**
+   * Static unset property method
+   * @method remove
+   * @param string $key Name of the index being removed
+   */
+  public static function remove ( $key )
+  {
+    $instance = self::__init ();
+    unset ( $instance->store [ $key ] );
+  }
 }
