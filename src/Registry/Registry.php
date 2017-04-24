@@ -90,4 +90,16 @@ class Registry
     $instance = self::__init ();
     return get_object_vars ( $instance );
   }
+
+  /** Sleep method for data serialization */
+  private function __sleep ()
+  {
+    $this->store = serialize ( $this->store );
+  }
+
+  /** Wake method for unserialization of the data */
+  private function __wakeup ()
+  {
+    $this->store = unserialize ( $this->store );
+  }
 }
