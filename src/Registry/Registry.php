@@ -33,4 +33,16 @@ class Registry
     }
     return self::$instance;
   }
+
+  /**
+   * Static setter method
+   * @method add
+   * @param string $key The name of the index being set in the register.
+   * @param mixed $value The value being assigned to the index ($key)
+   */
+  public static function add ( $key , $value )
+  {
+    $instance = self::__init ();
+    $instance->store [ $key ] = $value;
+  }
 }
