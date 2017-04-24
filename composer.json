@@ -1,10 +1,19 @@
 {
-    "name": "jorb/php-registry",
+    "name": "jordanbrauer/php-registry",
+    "description": "A simple implementation of a static registry class to store global application key/values.",
+    "version": "0.0.1",
+    "type": "project",
+    "license": "MIT",
     "authors": [
         {
             "name": "Jordan Brauer",
             "email": "jbrauer.inc@gmail.com"
         }
     ],
+    "autoload": {
+      "psr-4": {
+        "Jorb\\Registry\\": "src/Registry/"
+      }
+    },
     "require": {}
 }
