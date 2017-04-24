@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="Registry.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="5" severity="error" message="No summary for class \Jorb\Registry\Registry" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="9" severity="error" message="No summary for property $instance" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="13" severity="error" message="No summary for property $store" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+</checkstyle>

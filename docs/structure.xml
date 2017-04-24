@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="2.8.5">
+  <partials/>
+  <file path="Registry.php" generated-path="Registry.html" hash="c0012cd8e2a5f02d913eb5de1b5a0f29" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Jorb\Registry" line="5" package="Default">
+      <extends/>
+      <name>Registry</name>
+      <full_name>\Jorb\Registry\Registry</full_name>
+      <docblock line="5">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="5" description="Default"/>
+      </docblock>
+      <property static="true" visibility="private" namespace="Jorb\Registry" line="9" package="Default">
+        <name>$instance</name>
+        <full_name>\Jorb\Registry\Registry::instance</full_name>
+        <default></default>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+          <tag name="property" line="9" description="" type="object" variable="$instance">
+            <type>object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Jorb\Registry" line="13" package="Default">
+        <name>$store</name>
+        <full_name>\Jorb\Registry\Registry::store</full_name>
+        <default></default>
+        <docblock line="13">
+          <description></description>
+          <long-description></long-description>
+          <tag name="property" line="13" description="Array containing objects, classes, variables, and other data" type="array" variable="$store">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Jorb\Registry" line="19" package="Default">
+        <name>__construct</name>
+        <full_name>\Jorb\Registry\Registry::__construct()</full_name>
+        <docblock line="19">
+          <description>Constructor method</description>
+          <long-description></long-description>
+          <tag name="method" line="19" description="__construct" method_name=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Jorb\Registry" line="29" package="Default">
+        <name>__init</name>
+        <full_name>\Jorb\Registry\Registry::__init()</full_name>
+        <docblock line="29">
+          <description>Static instance creation</description>
+          <long-description></long-description>
+          <tag name="method" line="29" description="__init" method_name=""/>
+          <tag name="return" line="29" description="" type="\Jorb\Registry\Registry">
+            <type>\Jorb\Registry\Registry</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Jorb\Registry" line="43" package="Default">
+        <name>add</name>
+        <full_name>\Jorb\Registry\Registry::add()</full_name>
+        <docblock line="43">
+          <description>Static setter method</description>
+          <long-description></long-description>
+          <tag name="method" line="43" description="add" method_name=""/>
+          <tag name="param" line="43" description="&lt;p&gt;The name of the index being set in the register.&lt;/p&gt;" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="43" description="&lt;p&gt;The value being assigned to the index ($key)&lt;/p&gt;" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Jorb\Registry" line="55" package="Default">
+        <name>load</name>
+        <full_name>\Jorb\Registry\Registry::load()</full_name>
+        <docblock line="55">
+          <description>Static getter method</description>
+          <long-description></long-description>
+          <tag name="method" line="55" description="load" method_name=""/>
+          <tag name="param" line="55" description="&lt;p&gt;Name of the index being retrieved from the register.&lt;/p&gt;" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="55" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Jorb\Registry" line="67" package="Default">
+        <name>stored</name>
+        <full_name>\Jorb\Registry\Registry::stored()</full_name>
+        <docblock line="67">
+          <description>Static property check method</description>
+          <long-description></long-description>
+          <tag name="method" line="67" description="stored" method_name=""/>
+          <tag name="param" line="67" description="&lt;p&gt;Name of the index being checked&lt;/p&gt;" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="67" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Jorb\Registry" line="78" package="Default">
+        <name>remove</name>
+        <full_name>\Jorb\Registry\Registry::remove()</full_name>
+        <docblock line="78">
+          <description>Static unset property method</description>
+          <long-description></long-description>
+          <tag name="method" line="78" description="remove" method_name=""/>
+          <tag name="param" line="78" description="&lt;p&gt;Name of the index being removed&lt;/p&gt;" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Jorb\Registry" line="88" package="Default">
+        <name>output</name>
+        <full_name>\Jorb\Registry\Registry::output()</full_name>
+        <docblock line="88">
+          <description>Get a nicely formatted output of objects currently in the register</description>
+          <long-description></long-description>
+          <tag name="method" line="88" description="output" method_name=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Jorb\Registry" line="95" package="Default">
+        <name>__sleep</name>
+        <full_name>\Jorb\Registry\Registry::__sleep()</full_name>
+        <docblock line="95">
+          <description>Sleep method for data serialization</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Jorb\Registry" line="101" package="Default">
+        <name>__wakeup</name>
+        <full_name>\Jorb\Registry\Registry::__wakeup()</full_name>
+        <docblock line="101">
+          <description>Wake method for unserialization of the data</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="5" code="PPC:ERR-50005">No summary for class \Jorb\Registry\Registry</error>
+      <error line="9" code="PPC:ERR-50007">No summary for property $instance</error>
+      <error line="13" code="PPC:ERR-50007">No summary for property $store</error>
+    </parse_markers>
+    <source>eJydVU1v2zAMvftX8JCDE3TrvVnWDTsM2GGHdcAO2xDIMhNrsSVDktNmQ/77qA8nchs3SC6GPsjHx0dafHffVm2WSdagaRlH+KJ08esbroWxejfPMl4zY6A/yP5lALezGX1hBh9arVrUdgeq+IPcwkRIY5kkmNktmbRabJlFoDMr+PGWYE+iMK3ZDibGKo3w0W+4kpYJKeQ6xjA34CkhLbZMC1bUbslkCcpWqKFklg3DB8Bh0E+KuOiO0w00aCtVRjJhA8sl7y38RcBTlhhgCatOciuUTM0gn5KN0wdgYith3rwPiSxiXvl0Tpf7AY2HoMxBNq6ROeDnZEgBG8802k5LMFivjsy6oiaYqHPCzvmlxMQKcu96d3es1WIBsqtrmEYjeGkBEh/96dxb7P03YZIYjyZp0Fo8rTYr+4OWadZQItpVfLLBHXyvEFx7gloBFZi0KvEJCnQGBEl7f6x9h6J+OwBqxBOVa7JldYceKayCN3WRWEu6typBzl3U6TlpiTEp6Qne9PhJ/RPlgjyHUsyHBn2T/AxYv8khoI3KuB6XsVZsXMevIxpSFbXAretqrZqTWsZCezHPCeM49MpcIEgMMarLqByHx4NXyDcnZfFIlwvjAQ9+kWChVI1MnlMhhLxeB2Fca+ev9Mn4Y9JJ53vQ5ZQiGhu1xStaxbmdbYFgdkXygfmFWX8mFwZScKx3sFK6YdY90aqzbWddFnFuAO+0RmnJ6tmTMdQmOJ7LMcLnl5eW/t9loLSk+WXSdIfpwUON2Mb6uczCaDNIQ68Wf/2cGA665OE33nd8JPUovkzp1ZDCD7bBlIGrUBo+NsnLmZtQeSSM7jUuR9AxNvvsP0aLr74=</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="Jorb" full_name="Jorb">
+    <namespace name="Registry" full_name="Jorb\Registry"/>
+  </namespace>
+  <deprecated count="0"/>
+</project>
