@@ -1,0 +1,10 @@
+{
+    "name": "jorb/php-registry",
+    "authors": [
+        {
+            "name": "Jordan Brauer",
+            "email": "jbrauer.inc@gmail.com"
+        }
+    ],
+    "require": {}
+}
