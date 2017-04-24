@@ -80,4 +80,14 @@ class Registry
     $instance = self::__init ();
     unset ( $instance->store [ $key ] );
   }
+
+  /**
+   * Get a nicely formatted output of objects currently in the register
+   * @method output
+   */
+  public static function output ()
+  {
+    $instance = self::__init ();
+    return get_object_vars ( $instance );
+  }
 }
