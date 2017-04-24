@@ -91,7 +91,8 @@ Run the `index.php` file from your command line to get the example out.
 ```shell
 $ php -f index.php
 ```
->```
+> `output`
+```
 array(1) {
   ["store"]=>
   array(6) {
