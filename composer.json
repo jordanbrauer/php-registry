@@ -16,7 +16,10 @@
       }
     },
     "require": {
-      "php": ">=5.2.9",
-        "phpdocumentor/phpdocumentor": "^2.9"
+      "php": ">=5.2.9"
+    },
+    "require-dev": {
+      "phpdocumentor/phpdocumentor": "^2.9",
+        "symfony/var-dumper": "^3.4"
     }
 }

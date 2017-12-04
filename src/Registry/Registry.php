@@ -5,101 +5,106 @@ namespace Jorb\Registry;
 class Registry
 {
   /**
-   * @property object $instance */
+   * @var $instance
+   */
   private static $instance;
 
   /**
-   * @property array $store Array containing objects, classes, variables, and other data */
+   * @var array $store Array containing objects, classes, variables, and other data
+   */
   private $store;
 
   /**
    * Constructor method
-   * @method __construct
    */
   protected function __construct ()
   {
-    $this->store = array ();
+    $this->store = array();
   }
 
   /**
-   * Static instance creation
-   * @method __init
+   * Static instance creation method
+   *
    * @return self
    */
   public static function __init ()
   {
-    if ( self::$instance == null ) {
+    if (self::$instance == null)
       self::$instance = new self;
-    }
+
     return self::$instance;
   }
 
   /**
    * Static setter method
-   * @method add
+   *
    * @param string $key The name of the index being set in the register.
-   * @param mixed $value The value being assigned to the index ($key)
+   * @param mixed $value The value being assigned to the index ($key).
+   * @return void
    */
-  public static function add ( $key , $value )
+  public static function add ($key, $value)
   {
-    $instance = self::__init ();
-    $instance->store [ $key ] = $value;
+    $instance = self::__init();
+    $instance->store[$key] = $value;
   }
 
   /**
    * Static getter method
-   * @method load
+   *
    * @param string $key Name of the index being retrieved from the register.
    * @return mixed
    */
-  public static function load ( $key )
+  public static function load ($key)
   {
-    $instance = self::__init ();
-    return $instance->store [ $key ];
+    $instance = self::__init();
+    return $instance->store [$key];
   }
 
   /**
    * Static property check method
-   * @method stored
+   *
    * @param string $key Name of the index being checked
    * @return boolean
    */
-  public static function stored ( $key )
+  public static function stored ($key)
   {
-    $instance = self::__init ();
-    return isset ( $instance->store [ $key ] );
+    $instance = self::__init();
+    return isset($instance->store[$key]);
   }
 
   /**
    * Static unset property method
-   * @method remove
+   *
    * @param string $key Name of the index being removed
    */
-  public static function remove ( $key )
+  public static function remove ($key)
   {
-    $instance = self::__init ();
-    unset ( $instance->store [ $key ] );
+    $instance = self::__init();
+    unset($instance->store[$key]);
   }
 
   /**
    * Get a nicely formatted output of objects currently in the register
-   * @method output
    */
   public static function output ()
   {
-    $instance = self::__init ();
-    return get_object_vars ( $instance );
+    $instance = self::__init();
+    return get_object_vars($instance);
   }
 
-  /** Sleep method for data serialization */
+  /**
+   * Sleep method for data serialization
+   */
   private function __sleep ()
   {
-    $this->store = serialize ( $this->store );
+    $this->store = serialize($this->store);
   }
 
-  /** Wake method for unserialization of the data */
+  /**
+   * Wake method for unserialization of the data
+   */
   private function __wakeup ()
   {
-    $this->store = unserialize ( $this->store );
+    $this->store = unserialize($this->store);
   }
 }
