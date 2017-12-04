@@ -7,34 +7,16 @@ use OutOfBoundsException;
 class Registry
 {
   /**
-   * @var $instance
+   * @var array $store Array containing objects, classes, variables, and other data.
    */
-  private static $instance;
-
-  /**
-   * @var array $store Array containing objects, classes, variables, and other data
-   */
-  private $store;
+  private static $store;
 
   /**
    * Constructor method
    */
-  protected function __construct ()
+  public function __construct ()
   {
-    $this->store = array();
-  }
-
-  /**
-   * Static instance creation method
-   *
-   * @return self
-   */
-  public static function __init ()
-  {
-    if (self::$instance == null)
-      self::$instance = new self;
-
-    return self::$instance;
+    self::$store = [];
   }
 
   /**
@@ -46,8 +28,7 @@ class Registry
    */
   public static function add ($key, $value)
   {
-    $instance = self::__init();
-    $instance->store[$key] = $value;
+    self::$store[$key] = $value;
   }
 
   /**
@@ -60,8 +41,7 @@ class Registry
   {
     if (self::stored($key) === false)
       throw new OutOfBoundsException("Trying to load undefined index: {$key} from Registry");
-    $instance = self::__init();
-    return $instance->store [$key];
+    return self::$store[$key];
   }
 
   /**
@@ -72,8 +52,7 @@ class Registry
    */
   public static function stored ($key)
   {
-    $instance = self::__init();
-    return isset($instance->store[$key]);
+    return isset(self::$store[$key]);
   }
 
   /**
@@ -83,8 +62,7 @@ class Registry
    */
   public static function remove ($key)
   {
-    $instance = self::__init();
-    unset($instance->store[$key]);
+    unset(self::$store[$key]);
   }
 
   /**
@@ -92,23 +70,6 @@ class Registry
    */
   public static function output ()
   {
-    $instance = self::__init();
-    return get_object_vars($instance);
-  }
-
-  /**
-   * Sleep method for data serialization
-   */
-  private function __sleep ()
-  {
-    $this->store = serialize($this->store);
-  }
-
-  /**
-   * Wake method for unserialization of the data
-   */
-  private function __wakeup ()
-  {
-    $this->store = unserialize($this->store);
+    return get_class_vars(__CLASS__);
   }
 }

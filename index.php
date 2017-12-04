@@ -2,12 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-use \Jorb\Registry\Registry as Registry;
-
-
-// Start a new instance of the Registry (do this in your bootstrap code)
-// Regular usage like: `$Registry = new Registry();` will throw an error
-Registry::__init();
+use Jorb\Registry\Registry;
 
 // Add anything you want to the registry
 Registry::add('string', 'Hello World!');
