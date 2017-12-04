@@ -2,6 +2,8 @@
 
 namespace Jorb\Registry;
 
+use OutOfBoundsException;
+
 class Registry
 {
   /**
@@ -56,6 +58,8 @@ class Registry
    */
   public static function load ($key)
   {
+    if (self::stored($key) === false)
+      throw new OutOfBoundsException("Trying to load undefined index: {$key} from Registry");
     $instance = self::__init();
     return $instance->store [$key];
   }

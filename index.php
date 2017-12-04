@@ -30,4 +30,4 @@ Registry::stored('bar'); // returns true
 Registry::load('string'); // returns 'Hello World!'
 
 // Get the entire current contents of the registry
-var_dump(Registry::output());
+dump(Registry::output());
